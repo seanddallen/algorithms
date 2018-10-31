@@ -250,9 +250,35 @@ anagrams('string', 'ringst!!!')
 
 // Sentence Capitalization
 
-// Instructions:
+// Instructions: write function that accepts a string. The function should capitalize the first letter of each word then return the capitalized string.
 
 // Steps (solution #1)
+
+function capitalize(str){
+  let strArr = str.split(' ')
+  let capArr = strArr.map(string => string[0].toUpperCase() + 
+string.slice(1))
+  return capArr.join(' ')
+}
+
+capitalize('this is a string')
+
+// Steps (solution #2)
+
+function capitalize(str){
+	return = str[0].toUpperCase()
+	for(let i = 1; i < str.length; i++){
+		if(str[i – 1] === ‘’){
+		result += str[i].toUpperCase();
+	} else {
+		result += str[i]
+	}
+
+	return result
+}
+
+capitalize('this is a string')
+
 
 
 ////////////////////////////////////////////////////////////////////////////////
