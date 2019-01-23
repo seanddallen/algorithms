@@ -286,10 +286,50 @@ capitalize('this is a string')
 
 // Printing Steps
 
-// Instructions:
+// Instructions:Write a function that takes a positive number N, the function should console.log a step shape with N levels using the character #. Make sure the step has spaces on the right hand side. 
+
+// Ex: steps(3)
+// “#     ”
+// “##  ”
+// “###”
 
 // Steps (solution #1)
 
+function steps(n){
+  for (let row = 0; row < n; row++){
+    let stair = ''
+
+    for (let col = 0; col < n; col++){
+      if(col <= row){
+        stair += '#'
+      } else {
+        stair += ' '
+      }
+    }
+    console.log(stair)
+  }
+}
+
+
+// Steps (solution #2) – recursive 
+
+function steps(n, row = 0, stair = ''){
+  if(n === row){
+    return;
+  }
+
+  if(n === stair.length){
+    console.log(stair)
+    steps(n, row++)
+  }
+
+  if(stair.length <= row){
+    stair += '#'
+  } else {
+    stair += ' '
+  }
+  steps(n, row, stair)
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 
