@@ -106,6 +106,40 @@ function reverseInt(n) {
   return parseInt(reversed) * math.sign(n);
 }
 
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+// Factorial 
+//
+// Instructions: given number (num) return the factorial of the number (ex: num = 3: (3*2*1 = 6)
+
+//Steps (solution #1)
+
+function factorial(num){
+  let total = 1;
+  for (let i = num; i > 1; i--){
+    total *= i;
+  }
+  return total
+}
+
+function factorial(num){
+  let total = 1;
+  for (let i = 2; i <= num; i++){
+    total *= i;
+  }
+  return total
+}
+
+//Steps (solution #2) - recursive 
+
+function factorial(num){
+  if (num === 1){return 1}
+  return num * factorial(num-1)
+}
+
+
 ////////////////////////////////////////////////////////////////////////////////
 
 
@@ -115,10 +149,10 @@ Instructions: given a string, return the character that is most commonly used in
 
 Function maxChar(str) { }
 
-Steps (solution #1)
-•	method: convert string to object
-o	used for any problem counting number of each type of characters in a string
-o	the keys are the characters in the string, the values are the number of times
+//Steps (solution #1)
+	// method: convert string to object
+	// used for any problem counting number of each type of characters in a string
+	// the keys are the characters in the string, the values are the number of times
 
 Function maxChar(str) {
   const string = “Hello There!”
