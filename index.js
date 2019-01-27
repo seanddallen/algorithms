@@ -512,9 +512,23 @@ function matrix(n){
 
 // Runtime Complexity – Fibonacci 
 
-// Instructions:
+// Instructions: Print out the nth entry in the fibonacci series
 
-// Steps (solution #1)
+Steps (solution #1)
+
+function fib(n){
+  const series = [0, 1]
+
+  for (let i = 2; i <= n; i++){
+    const a = series[i - 1]
+    const b = series[i - 2]
+
+    series.push(a + b)
+  }
+  return series[n]
+}
+
+Steps (solution #2) - recursive
 
 
 
