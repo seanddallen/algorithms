@@ -761,8 +761,23 @@ function addParams(...args){
 
 ////////////////////////////////////////////////////////////////////////////////
 
+	
+//Add Border 
 
+//Instructions: Given a rectangular matrix of characters, add a border of asterisks(*) to it	
+//Ex: [“abc”, “def”] returns [“*****”, “*abc*”, “*def*”, “*****”]
+//Steps (solution #1)
 
+function addBorder(matrix){
+  const wall = '*'.repeat(matrix[0].length + 2)
+  matrix.unshift(wall)
+  matrix.push(wall)
+
+  for (let i = 1; i < matrix.length - 1; i++){
+    matrix[i] = '*'.concat(matrix[i]).concat('*')
+  }
+  return matrix
+}
 
 
 ////////////////////////////////////////////////////////////////////////////////
