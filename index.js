@@ -782,8 +782,25 @@ function addBorder(matrix){
 
 ////////////////////////////////////////////////////////////////////////////////
 
+	
+//Add Two Digits
 
+//Instructions: you are given a two digit integer n. return the sum of the two digits
 
+//Steps (solution #1)
+
+function addTwoDigits(num){
+  let nums = num.toString().split('')
+  return parseInt(nums[0]) + parseInt(nums[1])
+}
+
+//Steps (solution #2)
+
+function addTwoDigits(num){
+  let sum = 0;
+  num.toString().split('').forEach(num => sum += parseInt(num))
+  return sum
+}
 
 
 ////////////////////////////////////////////////////////////////////////////////
