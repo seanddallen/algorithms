@@ -806,7 +806,24 @@ function addTwoDigits(num){
 ////////////////////////////////////////////////////////////////////////////////
 
 	
-	
+//Adjacent Elements Product
+
+//Instructions: Given an array of integers, find the pair of adjacent elements that has the largest product and return that product
+
+//Steps (solution #1)
+
+function greatestAdjacentProduct(arr){
+  let greatestProduct = 0;
+  let currentProduct = 0;
+
+  for (let i = 0; i < arr.length; i++){
+    currentProduct = arr[i] * arr[i+1]
+    if (currentProduct > greatestProduct){
+      greatestProduct = currentProduct
+    }
+  }
+  return greatestProduct
+}
 	
 	
 ////////////////////////////////////////////////////////////////////////////////
