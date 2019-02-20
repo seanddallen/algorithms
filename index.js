@@ -828,7 +828,27 @@ function greatestAdjacentProduct(arr){
 	
 ////////////////////////////////////////////////////////////////////////////////
 
+	
+//All Longest Strings
 
+//Instructions: Given an array of strings, return another array containing all of its longest strings
+
+//Steps (solution #1)
+
+function longestStrings(arr){
+  let longest = 0; 
+  const longestStrArr = [];
+
+  arr.forEach(str => longest = longest < str.length ? str.length : longest)
+
+  arr.forEach(str => {
+    if(str.length === longest){
+      longestStrArr.push(str)
+    }
+  })
+
+  return longestStrArr;
+}
 
 
 
