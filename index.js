@@ -854,8 +854,28 @@ function longestStrings(arr){
 
 ////////////////////////////////////////////////////////////////////////////////
 
-	
-	
+
+//Almost Increasing Sequence
+
+//Instructions: given a sequence of integers as an array, determine whether it is possible to obtain a strictly increasing sequence by removing no more than one element from the array (remove 1 item and the rest will be in ascending order)
+
+//Steps (solution #1)
+
+function almostIncreasingSequence(arr){
+  let count = 0;
+  
+  for(let i = 0; i < arr.length; i++){
+    if (arr[i] < arr[i+1]){
+      console.log(arr[i])
+    } else if (arr[i] >= arr[i+1]){
+      count++
+      if(count > 1){
+        return false
+      } 
+    }
+  }
+  return true
+}
 	
 	
 ////////////////////////////////////////////////////////////////////////////////
