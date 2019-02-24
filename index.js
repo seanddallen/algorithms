@@ -884,7 +884,24 @@ function almostIncreasingSequence(arr){
 ////////////////////////////////////////////////////////////////////////////////
 
 
+//Alphabetic Shift
 
+//Instructions: Given a string, replace each of its characters by the next one in the alphabet	
+
+//Steps (solution #1)
+
+function alphabeticShift(str){
+  let shiftedStr = ''
+  for (char of str){
+    let lowerChar = char.toLowerCase()
+    if (lowerChar === 'z'){
+      shiftedStr += 'a'
+    } else {
+      shiftedStr += String.fromCharCode(lowerChar.charCodeAt()+1)
+    }
+  }
+  return shiftedStr
+}
 
 
 ////////////////////////////////////////////////////////////////////////////////
