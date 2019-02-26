@@ -906,8 +906,24 @@ function alphabeticShift(str){
 
 ////////////////////////////////////////////////////////////////////////////////
 	
-	
-	
+
+//Alphabet Subsequence
+
+//Instructions: check whether the given string is a subsequence of the plaintext alphabet (every character is in alphabetical order with no repeats)
+
+//Steps (solution #1)
+
+function alphabetSubsequence(str){
+  let lowerStr = str.toLowerCase()
+  for (let i = 0; i < lowerStr.length; i++){
+    if (i < lowerStr.length - 1){
+      if (lowerStr[i].charCodeAt() >= lowerStr[i+1].charCodeAt()){
+        return false
+      }
+    }
+  }
+  return true
+}
 	
 	
 ////////////////////////////////////////////////////////////////////////////////
