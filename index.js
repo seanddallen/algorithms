@@ -970,6 +970,17 @@ function areEquallyStrong(myLeft, myRight, friendLeft, friendRight){
   return equallyStrong;
 }
 
+//Steps (solution #2)
+
+function areEquallyStrong(myLeft, myRight, friendLeft, friendRight){
+  const myWeakest = myLeft <= myRight ? myLeft : myRight; 
+  const myStrongest = myLeft >= myRight ? myLeft : myRight; 
+  const friendWeakest = friendLeft <= friendRight ? friendLeft : friendRight; 
+  const friendStrongest = friendLeft >= friendRight ? friendLeft : friendRight; 
+
+  return myStrongest === friendStrongest && myWeakest === friendWeakest;
+}
+
 	
 ////////////////////////////////////////////////////////////////////////////////
 
