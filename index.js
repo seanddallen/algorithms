@@ -952,9 +952,24 @@ function alternatingSums(arr){
 
 ////////////////////////////////////////////////////////////////////////////////
 	
-	
-	
-	
+//Are Equally Strong
+
+//Instructions: Call two arms equally strong if the heaviest weights they each are able to lift are equal. 
+	//Call two people equally strong if their strongest arms are equally strong (wehether left or right) and so are their weakest arms. 
+	//Given your and your friend’s arms’ lifting capabilities, find out if the two of you are equally strong. 
+
+//Steps (solution #1)
+
+function areEquallyStrong(myLeft, myRight, friendLeft, friendRight){
+  let equallyStrong = false; 
+
+  if (Math.max(myLeft, myRight) === Math.max(friendLeft, friendRight) && Math.min(myLeft, myRight) === Math.min(friendLeft, friendRight)){
+    equallyStrong = true; 
+  }
+
+  return equallyStrong;
+}
+
 	
 ////////////////////////////////////////////////////////////////////////////////
 
