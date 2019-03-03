@@ -1037,7 +1037,23 @@ function arrayChange(arr){
 
   return moves; 
 }	
-	
+
+//Steps (solution #2) – better (no nested loop)
+
+function arrayChange(arr){
+  let moves = 0;
+
+  for (let i = 0; i < arr.length; i++){
+    if(arr[i] >= arr[i+1]){
+      const difference = (arr[i] + 1) - arr[i + 1];
+      arr[i + 1] = arr[i] + 1
+      moves += difference
+    }
+  }
+
+  return moves; 
+}
+
 	
 ////////////////////////////////////////////////////////////////////////////////
 
