@@ -1018,8 +1018,25 @@ function areSimilar(a, b){
 
 ////////////////////////////////////////////////////////////////////////////////
 	
-	
-	
+
+//Array Change
+
+//Instructions: You are given an array of integers. On each move you are allowed to increase exactly one of its elements by one. Find the minimal number of moves required to obtain a strictly increasing sequence from the input. 
+
+//Steps (solution #1)
+
+function arrayChange(arr){
+  let moves = 0;
+
+  for (let i = 1; i < arr.length; i++){
+    while(arr[i] <= arr[i-1]){
+      arr[i]++
+      moves++
+    }
+  }
+
+  return moves; 
+}	
 	
 	
 ////////////////////////////////////////////////////////////////////////////////
