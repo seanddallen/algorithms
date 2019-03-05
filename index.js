@@ -1,8 +1,6 @@
 // Reverse String
-//
+
 // Instructions: Given a string, return a new string with the reversed order of characters
-//
-// Function reverse(str) { … }
 
 // Steps (solution #1)
 // 1.	Method: Array.prototype.reverse()
@@ -60,11 +58,9 @@ Function reverse(str) {
 ////////////////////////////////////////////////////////////////////////////////
 
 // Palindrome
-//
+
 // Instructions: Given a string, return true if the string is a palindrome (same both ways) or false if not
-//
-// Function palidrome(str) { … }
-//
+
 // Steps (solution #1)
 
 Function palidrome(str) {
@@ -83,13 +79,11 @@ Function palidrome(str) {
 ////////////////////////////////////////////////////////////////////////////////
 
 // Integer Reversal
-//
+
 // Instructions: given an integer, return an integer that is the reverse ordering of numbers
-//
-// Function reverseInt(n) { }
-//
+
 // Steps (solution #1)
-// •	method: reverse string
+	// method: reverse string
 
 function reverseInt(n) {
   const reversed = n.toString().split(‘’).reverse().join(‘’);
@@ -111,7 +105,7 @@ function reverseInt(n) {
 
 
 // Factorial 
-//
+
 // Instructions: given number (num) return the factorial of the number (ex: num = 3: (3*2*1 = 6)
 
 //Steps (solution #1)
