@@ -1051,8 +1051,37 @@ function arrayChange(arr){
 	
 ////////////////////////////////////////////////////////////////////////////////
 
+	
+//Array Conversion
 
+//Instructions: Given an array of integers, perform the following operations until the array contains only one element: On the 1st, 3rd, 5th, etc. iterations, replace each pair of consecutive elements with  their sum. On the 2nd, 4th, 6th, etc. iterations, replace each pair of consecutive elements with their product. When finished, there should be a single number left in the array. Return that number. 
 
+//Steps (solution #1)
+
+function arrayConversion(arr){
+  let isOdd = true;
+
+  while(arr.length !== 1){
+    arr = sumProduct(arr, isOdd)
+    isOdd = !isOdd;
+  }
+  return arr[0]; 
+}
+
+function sumProduct(nums, isOdd){
+  const sumProducts = []
+  if(isOdd){
+    for(let i = 0; i < nums.length; i += 2){
+      console.log(nums[i])
+      sumProducts.push(nums[i] + nums[i + 1])
+    }
+  } else {
+    for(let i = 0; i < nums.length; i += 2){
+      sumProducts.push(nums[i] * nums[i + 1])
+    }
+  }
+  return sumProducts;
+}
 
 
 ////////////////////////////////////////////////////////////////////////////////
