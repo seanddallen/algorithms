@@ -1117,7 +1117,38 @@ function arrayMaxConsecutiveSum(arr, k){
 ////////////////////////////////////////////////////////////////////////////////
 
 
+//Array Maximal Adjacent Difference
 
+//Instructions: Given an array of integers, find the maximal absolute difference between any two of its adjacent elements. 
+
+//Steps (solution #1)
+
+function arrayMaxAdjacentDifference(arr){
+  let maxDiff = 0;
+
+  for (let i = 0; i < arr.length; i++){
+    if(Math.abs(arr[i] - arr[i - 1]) > maxDiff){
+      maxDiff = Math.abs(arr[i] - arr[i - 1])
+    } else if(Math.abs(arr[i] - arr[i + 1]) > maxDiff){
+      maxDiff = Math.abs(arr[i] - arr[i + 1])
+    }
+  }
+
+  return maxDiff;
+}
+
+//Steps (solution #2)
+
+function arrayMaxAdjacentDifference(arr){
+  let maxDiff = Math.abs(arr[0] – arr[1]);
+
+  for (let i = 0; i < arr.length; i++){
+	let absDiff = Math.abs(arr[i-1] – arr[i]);
+	maxDiff = absDiff > maxDiff ? absDiff : maxDiff; 
+  }
+
+  return maxDiff;
+}
 
 
 ////////////////////////////////////////////////////////////////////////////////
