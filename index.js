@@ -1086,9 +1086,33 @@ function sumProduct(nums, isOdd){
 
 ////////////////////////////////////////////////////////////////////////////////
 	
-	
-	
-	
+
+//Array Max Consecutive Sum
+
+//Instructions: Given an array of integers, find the maximal possible sum of some of its k consecutive elements. 
+
+//Steps (solution #1)
+function arrayMaxConsecutiveSum(arr, k){
+  let sum = 0; 
+  let max = 0; 
+
+  for (let i = 0; i < k; i++){
+    sum += arr[i]
+  }
+
+  max = sum; 
+
+  for (let i = k; i < arr.length; i++){
+    sum -= arr[i-k]
+    sum += arr[i]
+    if(sum > max){
+      max = sum;
+    }
+  }
+
+  return max;
+}
+
 	
 ////////////////////////////////////////////////////////////////////////////////
 
