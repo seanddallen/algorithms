@@ -1180,7 +1180,24 @@ function arrayPreviousLess(arr){
 ////////////////////////////////////////////////////////////////////////////////
 
 
+//Array Replace
 
+//Instructions: Given an array of integers, replace all the occurences of elemToReplace with substitutionElem. 
+
+//Steps (solution #1)
+
+function arrayReplace(arr, repEl, subEl){
+  let subArr = [];
+
+  arr.forEach(item => {
+    if(item === repEl){
+      item = subEl
+    }
+    subArr.push(item)
+  })
+
+  return subArr;
+}
 
 
 ////////////////////////////////////////////////////////////////////////////////
