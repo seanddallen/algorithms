@@ -1305,7 +1305,22 @@ function mean(numbers) {
 ////////////////////////////////////////////////////////////////////////////////
 	
 	
-	
+//Median
+
+//Instructions: Calculate Median
+
+//Steps (solution #1)
+
+function median(numbers) {
+    let median = 0
+    numbers.sort();
+    if (numbers.length % 2 === 0) {
+      median = (numbers[numbers.length / 2 - 1] + numbers[numbers.length / 2]) / 2;
+    } else { 
+      median = numbers[(numbers.length - 1) / 2];
+    }
+    return median;
+}
 	
 	
 ////////////////////////////////////////////////////////////////////////////////
