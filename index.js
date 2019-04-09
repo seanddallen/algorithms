@@ -1326,7 +1326,30 @@ function median(numbers) {
 ////////////////////////////////////////////////////////////////////////////////
 
 
+//Mode
 
+//Instructions: Calculate Mode
+
+//Steps (solution #1)
+
+let mode = function(arr){
+    let numMap = {};
+    for(var i = 0; i < arr.length; i++){
+        if(numMap[arr[i]] === undefined){
+            numMap[arr[i]] = 0;
+        }        
+            numMap[arr[i]] += 1;
+    }
+    let greatestFreq = 0;
+    let mode;
+    for(let prop in numMap){
+        if(numMap[prop] > greatestFreq){
+            greatestFreq = numMap[prop];
+            mode = prop;
+        }
+    }
+    return parseInt(mode);
+}
 
 
 ////////////////////////////////////////////////////////////////////////////////
