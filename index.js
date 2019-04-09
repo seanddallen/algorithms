@@ -1258,7 +1258,28 @@ function bishopAndPawn(bishop, pawn){
 ////////////////////////////////////////////////////////////////////////////////
 	
 	
-	
+//Intense String
+
+//Instructions: Strings are intense if they end in three or more more ! marks. However, having ! marks anywhere but the end makes for a non-intense string
+
+//Steps (solution #1)
+
+function intenseString(str) {
+  let bangCount = 0; 
+
+  for (let i = str.indexOf('!'); i < str.length; i++) {
+    if (str[i] !== '!') {
+      return false
+    } else {
+      bangCount++
+    }
+  }
+  if (bangCount < 3) {
+    return false
+  }
+  return true
+}
+
 	
 	
 ////////////////////////////////////////////////////////////////////////////////
