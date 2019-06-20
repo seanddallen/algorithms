@@ -1,3 +1,112 @@
+/////////////////////////////////////////////////////////////////////////////////////////
+				GALVANIZE ALGORITHMS
+/////////////////////////////////////////////////////////////////////////////////////////
+
+	
+//Intense String
+
+//Instructions: Strings are intense if they end in three or more more ! marks. However, having ! marks anywhere but the end makes for a non-intense string
+
+//Steps (solution #1)
+
+function intenseString(str) {
+  let bangCount = 0; 
+
+  for (let i = str.indexOf('!'); i < str.length; i++) {
+    if (str[i] !== '!') {
+      return false
+    } else {
+      bangCount++
+    }
+  }
+  if (bangCount < 3) {
+    return false
+  }
+  return true
+}
+
+	
+////////////////////////////////////////////////////////////////////////////////
+
+
+//Mean
+
+//Instructions: Calculate Mean
+
+//Steps (solution #1)
+
+
+function mean(numbers) {
+  let sum = 0; 
+
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  return sum / numbers.length; 
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+	
+	
+//Median
+
+//Instructions: Calculate Median
+
+//Steps (solution #1)
+
+function median(numbers) {
+    let median = 0
+    numbers.sort();
+    if (numbers.length % 2 === 0) {
+      median = (numbers[numbers.length / 2 - 1] + numbers[numbers.length / 2]) / 2;
+    } else { 
+      median = numbers[(numbers.length - 1) / 2];
+    }
+    return median;
+}
+	
+	
+////////////////////////////////////////////////////////////////////////////////
+
+
+//Mode
+
+//Instructions: Calculate Mode
+
+//Steps (solution #1)
+
+let mode = function(arr){
+    let numMap = {};
+    for(var i = 0; i < arr.length; i++){
+        if(numMap[arr[i]] === undefined){
+            numMap[arr[i]] = 0;
+        }        
+            numMap[arr[i]] += 1;
+    }
+    let greatestFreq = 0;
+    let mode;
+    for(let prop in numMap){
+        if(numMap[prop] > greatestFreq){
+            greatestFreq = numMap[prop];
+            mode = prop;
+        }
+    }
+    return parseInt(mode);
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+		CODING INTERVIEW BOOTCAMP ALGORITHMS AND DATA STRUCTURES
+/////////////////////////////////////////////////////////////////////////////////////////
+
+		
 // Reverse String
 
 // Instructions: Given a string, return a new string with the reversed order of characters
@@ -57,6 +166,7 @@ Function reverse(str) {
 
 ////////////////////////////////////////////////////////////////////////////////
 
+
 // Palindrome
 
 // Instructions: Given a string, return true if the string is a palindrome (same both ways) or false if not
@@ -76,7 +186,9 @@ Function palidrome(str) {
 // •	{Return character === str[str.length - i - 1];}); }
 //
 
+
 ////////////////////////////////////////////////////////////////////////////////
+
 
 // Integer Reversal
 
@@ -165,6 +277,7 @@ Function maxChar(str) {
       //iterates over characters in object, sets max to highest character and maxChar to name of that character, then return maxChar
       //for in loops used to iterate through objects
 
+
 ////////////////////////////////////////////////////////////////////////////////
 
 
@@ -186,6 +299,7 @@ for (let i = 1; i <= num; i++;) {
 		console.log(‘buzz’)
 	} else {
 		console.log(i); }}}
+
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -221,6 +335,7 @@ function chunk(array, size){
   }
   return chunkArr
 }
+
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -272,7 +387,6 @@ function buildCharMap(str){
 anagrams('string', 'ringst!!!')
 
 
-
 ////////////////////////////////////////////////////////////////////////////////
 
 
@@ -306,7 +420,6 @@ function capitalize(str){
 }
 
 capitalize('this is a string')
-
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -359,6 +472,7 @@ function steps(n, row = 0, stair = ''){
   steps(n, row, stair)
 }
 
+	
 ////////////////////////////////////////////////////////////////////////////////
 
 
@@ -408,7 +522,6 @@ function pyramid(n, row = 0, level = ''){
   }
   pyramid(n, row, level + add)
 }
-
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -531,6 +644,7 @@ function fib(n){
   return fib(n-1) + fib(n-2)
 }
 
+	
 ////////////////////////////////////////////////////////////////////////////////
 
 
@@ -717,12 +831,30 @@ function fib(n){
 
 // Steps (solution #1)
 
+	
+	
+/////////////////////////////////////////////////////////////////////////////////////////
+			ALGORITHMS AND DATA STRUCTURES MASTERCLASS
+/////////////////////////////////////////////////////////////////////////////////////////	
+	
+	
+//
 
+//Instructions: 
+			
+//Steps (solution #1)
 
 
 ////////////////////////////////////////////////////////////////////////////////
 
+			
+			
+			
+/////////////////////////////////////////////////////////////////////////////////////////
+				HUNDRED ALGORITHM CHALLENGE
+/////////////////////////////////////////////////////////////////////////////////////////
 	
+
 //Absolute Values Sum Minimization
 
 //Instructions: Given a sorted array of integers a, find an integer x from a such that the value of    
@@ -1258,103 +1390,6 @@ function bishopAndPawn(bishop, pawn){
 ////////////////////////////////////////////////////////////////////////////////
 	
 	
-//Intense String
-
-//Instructions: Strings are intense if they end in three or more more ! marks. However, having ! marks anywhere but the end makes for a non-intense string
-
-//Steps (solution #1)
-
-function intenseString(str) {
-  let bangCount = 0; 
-
-  for (let i = str.indexOf('!'); i < str.length; i++) {
-    if (str[i] !== '!') {
-      return false
-    } else {
-      bangCount++
-    }
-  }
-  if (bangCount < 3) {
-    return false
-  }
-  return true
-}
-
-	
-	
-////////////////////////////////////////////////////////////////////////////////
-
-
-//Mean
-
-//Instructions: Calculate Mean
-
-//Steps (solution #1)
-
-
-function mean(numbers) {
-  let sum = 0; 
-
-  for (let i = 0; i < numbers.length; i++) {
-    sum += numbers[i];
-  }
-  return sum / numbers.length; 
-}
-
-
-////////////////////////////////////////////////////////////////////////////////
-	
-	
-//Median
-
-//Instructions: Calculate Median
-
-//Steps (solution #1)
-
-function median(numbers) {
-    let median = 0
-    numbers.sort();
-    if (numbers.length % 2 === 0) {
-      median = (numbers[numbers.length / 2 - 1] + numbers[numbers.length / 2]) / 2;
-    } else { 
-      median = numbers[(numbers.length - 1) / 2];
-    }
-    return median;
-}
-	
-	
-////////////////////////////////////////////////////////////////////////////////
-
-
-//Mode
-
-//Instructions: Calculate Mode
-
-//Steps (solution #1)
-
-let mode = function(arr){
-    let numMap = {};
-    for(var i = 0; i < arr.length; i++){
-        if(numMap[arr[i]] === undefined){
-            numMap[arr[i]] = 0;
-        }        
-            numMap[arr[i]] += 1;
-    }
-    let greatestFreq = 0;
-    let mode;
-    for(let prop in numMap){
-        if(numMap[prop] > greatestFreq){
-            greatestFreq = numMap[prop];
-            mode = prop;
-        }
-    }
-    return parseInt(mode);
-}
-
-
-////////////////////////////////////////////////////////////////////////////////
-	
-	
 //Box Blur
 
 //Instructions: Last night you had to study, but decided to party instead. Now there is a black and white photo of you that is about to go viral. You cannot let this ruin your reputation, so you want to apply box blur algorithm to the photo to hide its content. The algorithm works as follows: each pixel x in the resulting image has a value equal to the average value of the input image pixels’ values from the 3x3 square with the center at x. All pixels at the edges are cropped. As pixel’s value is an integer, all fractions should be rounded down. 
@@ -1394,7 +1429,17 @@ function boxBlur(image){
 ////////////////////////////////////////////////////////////////////////////////
 
 	
-//Summation
+	
+	
+	
+	
+	
+/////////////////////////////////////////////////////////////////////////////////////////
+				     CODE WARS KATA
+/////////////////////////////////////////////////////////////////////////////////////////
+	
+	
+//Summation (Kata - 8)
 	
 //Instructions: Write a program that finds the summation of every number from 1 to num. 
 //The number will always be a positive integer greater than 0.
@@ -1417,7 +1462,6 @@ function summation(num) {
 }
 	
 const summation = num => num * (num + 1) / 2;
-
 
 
 ////////////////////////////////////////////////////////////////////////////////
