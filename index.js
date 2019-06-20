@@ -1393,15 +1393,38 @@ function boxBlur(image){
 	
 ////////////////////////////////////////////////////////////////////////////////
 
+	
+//Summation
+	
+//Instructions: Write a program that finds the summation of every number from 1 to num. 
+//The number will always be a positive integer greater than 0.
+	
+//Steps (solution #1)
 
+var summation = function(num) {
+  let sum = 0;
+  for (let i = num; i >= 1; i--){
+    sum += i
+  }
+  return sum
+}
+
+
+//Steps (solution #2)
+
+function summation(num) {
+  return num * (num + 1) / 2
+}
+	
+const summation = num => num * (num + 1) / 2;
 
 
 
 ////////////////////////////////////////////////////////////////////////////////
+
+
 	
-	
-	
-	
+
 	
 ////////////////////////////////////////////////////////////////////////////////
 
