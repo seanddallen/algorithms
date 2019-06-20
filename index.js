@@ -1628,7 +1628,52 @@ const summation = num => num * (num + 1) / 2;
 	
 ////////////////////////////////////////////////////////////////////////////////
 
+//Highest Scoring Word (Kata - 6)
+	
+//Instructions:Given a string of words, you need to find and return the highest scoring word.
+	//Each letter of a word scores points according to its position in the alphabet: a = 1, b = 2, c = 3 etc.
+	//You need to return the highest scoring word as a string.
+	//If two words score the same, return the word that appears earliest in the original string.
+	//All letters will be lowercase and all inputs will be valid.
 
+//Solution #1:
+
+function highestScoringWord(str){
+  let words = str.split(' ');
+  let highestWord ='';
+  let highestCount = 0;
+	
+  for (let i = 0; i < words.length; i++) {
+    let currHighest = 0;
+    for (let j = 0; j < words[i].length; j++) {
+      currHighest += words[i][j].codePointAt() - 96;
+    }
+	  
+    if (currHighest > highestCount) {
+      highestCount = currHighest;
+      highestWord = words[i]
+    }
+  }
+  return highestWord
+}
+	
+
+//Solution #2: 
+
+function highestScoringWord(str){
+  var arr = str.split(' ');
+  var str = 'abcdefghijklmnopqrstuvwxyz';
+
+  var newArr = arr.map(word => {
+    var sum = 0;
+    for (var i = 0; i < word.length; i++) {
+      sum += str.indexOf(word[i]);
+    }
+    return sum;
+  });
+	
+  return arr[newArr.indexOf(Math.max(...newArr))];
+}
 
 
 
