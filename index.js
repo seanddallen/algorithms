@@ -1722,6 +1722,7 @@ function greet(name){
 function findNeedle(haystack) {
   return `found the needle at position ${haystack.indexOf('needle')}`
 }
+	
 
 ////////////////////////////////////////////////////////////////////////////////
 	
@@ -1747,13 +1748,20 @@ function litres(time) {
 ////////////////////////////////////////////////////////////////////////////////
 
 
-//Sum of Positive (Kata - 8)
+//Playing Banjo? (Kata - 8)
 	
-//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+//Instructions: Create a function which answers the question "Are you playing banjo?".
+//If your name starts with the letter "R" or lower case "r", you are playing banjo!
+//The function takes a name as its only argument, and returns one of the following strings:
+//name + " plays banjo" 
+//name + " does not play banjo"
 
 //Solution #1: 
 	
-
+function areYouPlayingBanjo(name) {
+  return name.toLowerCase().startsWith('r') ? `${name} plays banjo` : `${name} does not play banjo`
+}
+	
 
 ////////////////////////////////////////////////////////////////////////////////
 	
