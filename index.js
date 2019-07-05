@@ -1766,12 +1766,20 @@ function areYouPlayingBanjo(name) {
 ////////////////////////////////////////////////////////////////////////////////
 	
 	
-//Sum of Positive (Kata - 8)
+//Abbreviate Name (Kata - 8)
 	
-//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+//Instructions: Write a function to convert a name into initials. 
+//This kata strictly takes two words with one space in between them.
+//The output should be two capital letters with a dot seperating them.
+//It should look like this: Sam Harris => S.H
 
 //Solution #1: 
 		
+function abbrevName(name){
+  const abbArr = name.split(' ').map(word => word[0].toUpperCase())
+  abbArr.splice(1,0,'.')
+  return abbArr.join('')
+}
 	
 	
 ////////////////////////////////////////////////////////////////////////////////
