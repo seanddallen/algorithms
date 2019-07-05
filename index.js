@@ -1785,13 +1785,18 @@ function abbrevName(name){
 ////////////////////////////////////////////////////////////////////////////////
 
 
-//Sum of Positive (Kata - 8)
+//Century from Year (Kata - 8)
 	
-//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+//Instructions: Given a year, return the century it is in.
+//The first century spans from the year 1 up to and including the year 100, 
+//The second - from the year 101 up to and including the year 200, etc.
 
 //Solution #1: 
 	
-
+function century(year) {
+    return Math.ceil(year/100);
+}
+	
 
 ////////////////////////////////////////////////////////////////////////////////
 	
