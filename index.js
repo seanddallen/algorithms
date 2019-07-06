@@ -2004,12 +2004,29 @@ const rps = (p1, p2) => {
 ////////////////////////////////////////////////////////////////////////////////
 	
 	
-//Sum of Positive (Kata - 7)
+//Mumbling (Kata - 7)
 	
-//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+//Instructions: This time no story, no theory. The examples below show you how to write function accum:
+//The parameter of accum is a string which includes only letters from a..z and A..Z.
+//EX: 
+	//accum("abcd") -> "A-Bb-Ccc-Dddd"
+	//accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
 
 //Solution #1: 
 		
+function accum(s) {
+  return s.split('').map((char, i) => char.toUpperCase() + char.toLowerCase().repeat(i)).join('-')
+}
+
+//Solution #2: 
+
+function accum(s) {
+  var array = [];
+  for (i = 0; i < (s.length); i++) {
+    array.push(s.charAt(i).toUpperCase() + s.charAt(i).toLowerCase().repeat(i));
+  };
+  return array.join("-");
+}
 	
 	
 ////////////////////////////////////////////////////////////////////////////////
