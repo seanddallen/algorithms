@@ -1446,11 +1446,15 @@ function candies(n, m){
 ////////////////////////////////////////////////////////////////////////////////
 	
 	
-//
+//Character Parity
 
-//Instructions:
+//Instructions: Given a character, return 'odd', 'even', or 'not a digit'
 
 //Solution #1: 	
+	
+function characterParity(char){
+    return isNaN(parseInt(char)) ? 'not a digit' : parseInt(char) % 2 === 0 ? 'even' : 'odd'
+}
 	
 	
 ////////////////////////////////////////////////////////////////////////////////
