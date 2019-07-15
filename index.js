@@ -2248,18 +2248,238 @@ function highestScoringWord(str){
 
 ////////////////////////////////////////////////////////////////////////////////
 	
+//Find Odd Int (Kata - 7)
 	
+//Instructions: Given an array, find the int that appears an odd number of times.
+//There will always be only one integer that appears an odd number of times.
+
+//Solution #1: 
 	
+function findOdd(A) {
+  const intObj = {};
+  let oddInt = 0;
+
+  A.forEach(item => intObj[item] ? intObj[item] += 1 : intObj[item] = 1)
+
+  for(let int in intObj){
+    if(intObj[int] % 2 !== 0){
+      oddInt = Number(int)
+    }
+  }
+  return oddInt
+}
 	
 	
 ////////////////////////////////////////////////////////////////////////////////
 
 
+//Sum of Positive (Kata - 6)
+	
+//Instructions: You get an array of numbers, return the sum of all of the positives ones.
 
+//Solution #1: 
+	
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+//Sum of Positive (Kata - 6)
+	
+//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+
+//Solution #1: 
+	
 
 
 ////////////////////////////////////////////////////////////////////////////////
 	
+
+//Sum of Positive (Kata - 6)
+	
+//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+
+//Solution #1: 
+	
+
+
+////////////////////////////////////////////////////////////////////////////////
+	
+
+//Sum of Positive (Kata - 6)
+	
+//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+
+//Solution #1: 
+	
+
+
+////////////////////////////////////////////////////////////////////////////////
+	
+
+//Sum of Positive (Kata - 6)
+	
+//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+
+//Solution #1: 
+	
+
+
+////////////////////////////////////////////////////////////////////////////////
+	
+
+//Sum of Positive (Kata - 6)
+	
+//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+
+//Solution #1: 
+	
+
+
+////////////////////////////////////////////////////////////////////////////////
+	
+
+//Sum of Positive (Kata - 6)
+	
+//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+
+//Solution #1: 
+	
+
+
+////////////////////////////////////////////////////////////////////////////////
+	
+
+//Sum of Positive (Kata - 6)
+	
+//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+
+//Solution #1: 
+	
+
+
+////////////////////////////////////////////////////////////////////////////////
+	
+
+//Sum of Positive (Kata - 6)
+	
+//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+
+//Solution #1: 
+	
+
+
+////////////////////////////////////////////////////////////////////////////////
+	
+
+//Sum of Positive (Kata - 6)
+	
+//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+
+//Solution #1: 
+	
+
+
+////////////////////////////////////////////////////////////////////////////////
+	
+
+//Sum of Positive (Kata - 6)
+	
+//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+
+//Solution #1: 
+	
+
+
+////////////////////////////////////////////////////////////////////////////////
+	
+
+//Sum of Positive (Kata - 6)
+	
+//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+
+//Solution #1: 
+	
+
+
+////////////////////////////////////////////////////////////////////////////////
+	
+
+//Sum of Positive (Kata - 6)
+	
+//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+
+//Solution #1: 
+	
+
+
+////////////////////////////////////////////////////////////////////////////////
+	
+
+//Sum of Positive (Kata - 6)
+	
+//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+
+//Solution #1: 
+	
+
+
+////////////////////////////////////////////////////////////////////////////////
+	
+
+//Sum of Positive (Kata - 6)
+	
+//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+
+//Solution #1: 
+	
+
+
+////////////////////////////////////////////////////////////////////////////////
+	
+
+//Sum of Positive (Kata - 6)
+	
+//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+
+//Solution #1: 
+	
+
+
+////////////////////////////////////////////////////////////////////////////////
+	
+
+//Sum of Positive (Kata - 6)
+	
+//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+
+//Solution #1: 
+	
+
+
+////////////////////////////////////////////////////////////////////////////////
+	
+
+//Sum of Positive (Kata - 6)
+	
+//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+
+//Solution #1: 
+	
+
+
+////////////////////////////////////////////////////////////////////////////////
+	
+
+//Sum of Positive (Kata - 6)
+	
+//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+
+//Solution #1: 
+	
+
+
+////////////////////////////////////////////////////////////////////////////////
 	
 	
 	
