@@ -1,5 +1,5 @@
 /////////////////////////////////////////////////////////////////////////////////////////
-				GALVANIZE ALGORITHMS
+				RANDOM ALGORITHMS
 /////////////////////////////////////////////////////////////////////////////////////////
 
 	
@@ -99,6 +99,21 @@ let mode = function(arr){
 ////////////////////////////////////////////////////////////////////////////////
 
 
+//Rock-Paper-Scissors-Lizard-Spock
+
+//Instructions: Scissors cuts paper, paper covers rock, rock crushes lizard, lizard poisons Spock, Spock smashes scissors, scissors decapitates lizard, lizard eats paper, paper disproves Spock, Spock vaporizes rock, and as it always has, rock crushes scissors.
+
+//Steps (solution #1)
+
+function RPSLS(p1, p2){
+  return p1 === p2 ? "Draw" : 
+    (p1 === 'scissors' && p2 === ('paper' || 'lizard')) || 
+    (p1 === 'rock' && p2 === ('scissors' || 'lizard')) || 
+    (p1 === 'paper' && p2 === ('rock' || 'spock')) || 
+    (p1 === 'lizard' && p2 === ('spock' || 'paper')) || 
+    (p1 === 'spock' && p2 === ('scissors' || 'rock'))
+    ? "Player 1 Wins!" : "Player 2 Wins!" 
+}
 
 
 
