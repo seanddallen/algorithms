@@ -2086,13 +2086,41 @@ function highAndLow(numbers){
 ////////////////////////////////////////////////////////////////////////////////
 
 
-//Sum of Positive (Kata - 7)
+//Shortest Word (Kata - 7)
 	
-//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+//Instructions: Simple, given a string of words, return the length of the shortest word(s).
+//String will never be empty and you do not need to account for different data types.
 
 //Solution #1: 
 	
+function findShort(s){
+  let shortest = 1000;
+  s.split(' ').forEach(word => {
+    if(word.length < shortest){
+      shortest = word.length
+    }
+  })
+  return shortest
+}
+	
+//Solution #2: 
 
+function findShort(str){
+    return Math.min(...str.split(" ").map(word => word.length));
+}
+
+//Solution #3: 
+	
+function findShort(str){
+  return str.split(' ').sort((a, b) => a.length - b.length)[0].length || 0;
+}
+
+//Solution #4: 
+
+function findShort(s){
+  return str.split(' ').map(a => a.length).reduce((a, b) => Math.min(a, b))
+}
+	
 
 ////////////////////////////////////////////////////////////////////////////////
 	
