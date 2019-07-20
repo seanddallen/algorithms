@@ -2417,11 +2417,48 @@ function solution(number){
 ////////////////////////////////////////////////////////////////////////////////
 
 
-//Sum of Positive (Kata - 6)
+//Find Parity Outlier (Kata - 6)
 	
-//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+//Instructions: You are given an array (which will have a length of at least 3, but could be very large) containing integers. 
+//The array is either entirely comprised of odd integers or entirely comprised of even integers except for a single integer N. 
+//Write a method that takes the array as an argument and returns this "outlier" N.
 
 //Solution #1: 
+
+function findOutlier(integers){
+  let oddCount = 0; 
+  let evenCount = 0; 
+  let oddNum; 
+  let evenNum; 
+  let outlierType; 
+
+  integers.forEach((int, i) => {
+    if(oddCount === 1 && evenCount === 1){
+      outlierType = int % 2 === 0 ? 'odd' : 'even'
+      return
+    }
+    if(int % 2 === 0 && evenCount === 0){
+      evenCount++
+      evenNum = int
+    }
+    if(int % 2 !== 0 && oddCount === 0){
+      oddCount++
+      oddNum = int
+    }
+    if(i === integers.indexOf(integers[integers.length - 1])){
+      outlierType = int % 2 === 0 ? 'even' : 'odd'
+    }
+  })
+  return outlierType === 'odd' ? oddNum : evenNum
+}
+	
+//Solution #2: 
+	
+function findOutlier(integers){
+  const even = integers.filter(int => int % 2 === 0);
+  const odd  = integers.filter(int => int % 2 !== 0);
+  return even.length === 1 ? even[0] : odd[0];
+}
 	
 
 
