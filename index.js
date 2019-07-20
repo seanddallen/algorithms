@@ -2141,12 +2141,44 @@ function descendingOrder(n){
 ////////////////////////////////////////////////////////////////////////////////
 
 
-//Sum of Positive (Kata - 7)
+//Complementary DNA (Kata - 7)
 	
-//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+//Instructions: Deoxyribonucleic acid (DNA) is a chemical found in the nucleus of cells and carries the "instructions" for the development and functioning of living organisms.
+//In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". 
+//You have function with one side of the DNA (string, except for Haskell); you need to get the other complementary side. 
+//EX: DNAStrand ("ATTGC") // return "TAACG"
 
 //Solution #1: 
+
+function DNAStrand(dna){
+  let newDNA = ''
+  dna.split("").forEach(char => {
+    if(char === "A"){
+      newDNA += "T"
+    } else if(char === "T"){
+      newDNA += "A"
+    } else if(char === "C"){
+      newDNA += "G"
+    } else if(char === "G"){
+      newDNA += "C"
+    }
+  })
+  return newDNA
+}
 	
+//Solution #2: 
+	
+function DNAStrand(dna){
+  return dna.replace(/A/g, 't').replace(/T/g, 'a').replace(/C/g, 'g').replace(/G/g, 'c').toUpperCase();
+}
+	
+//Solution #3: 
+	
+var pairs = {'A':'T','T':'A','C':'G','G':'C'};
+
+function DNAStrand(dna){
+  return dna.split('').map(char => pairs[char]).join('');
+}
 
 
 ////////////////////////////////////////////////////////////////////////////////
