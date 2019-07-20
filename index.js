@@ -2125,12 +2125,17 @@ function findShort(s){
 ////////////////////////////////////////////////////////////////////////////////
 	
 	
-//Sum of Positive (Kata - 7)
+//Descending Order (Kata - 7)
 	
-//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+//Instructions: Your task is to make a function that can take any non-negative integer as a argument and return it with its digits in descending order. 
+//Essentially, rearrange the digits to create the highest possible number.
+//Example: Input: 21445 Output: 54421
 
 //Solution #1: 
 		
+function descendingOrder(n){
+  return Number(n.toString().split('').sort().reverse().join(''))
+}
 	
 	
 ////////////////////////////////////////////////////////////////////////////////
