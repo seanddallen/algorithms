@@ -2207,13 +2207,27 @@ function XO(str) {
 ////////////////////////////////////////////////////////////////////////////////
 
 
-//Sum of Positive (Kata - 7)
+//Square Every Digit (Kata - 7)
 	
-//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+//Instructions: square every digit of a number.
+//For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
+//Note: The function accepts an integer and returns an integer
 
 //Solution #1: 
 	
+function squareDigits(num){
+  let sqStr = ''
+  num.toString().split('').forEach(n => sqStr += Math.pow(n, 2).toString())
+  return Number(sqStr)
+}
+	
+//Solution #2: 
 
+function squareDigits(num){
+  return Number(num.toString().split('').map(val => val * val).join(''));
+  
+}
+	
 
 ////////////////////////////////////////////////////////////////////////////////
 	
