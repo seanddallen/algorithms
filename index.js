@@ -2184,13 +2184,25 @@ function DNAStrand(dna){
 ////////////////////////////////////////////////////////////////////////////////
 	
 	
-//Sum of Positive (Kata - 7)
+//Xs and Os (Kata - 7)
 	
-//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+//Instructions: Check to see if a string has the same amount of 'x's and 'o's. 
+//The method must return a boolean and be case insensitive. The string can contain any char.
 
 //Solution #1: 
 		
+function XO(str) {
+  let xs = str.toLowerCase().split('').filter(char => char === 'x').length
+  let os = str.toLowerCase().split('').filter(char => char === 'o').length
+  return xs === os
+}
 	
+//Solution #2: 
+	
+function XO(str) {
+    return str.toLowerCase().split('x').length === str.toLowerCase().split('o').length;
+}
+
 	
 ////////////////////////////////////////////////////////////////////////////////
 
