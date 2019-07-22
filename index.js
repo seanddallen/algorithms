@@ -2465,13 +2465,48 @@ function findOutlier(integers){
 ////////////////////////////////////////////////////////////////////////////////
 	
 
-//Sum of Positive (Kata - 6)
+//Equal Sides of Array (Kata - 6)
 	
-//Instructions: You get an array of numbers, return the sum of all of the positives ones.
+//Instructions: You are going to be given an array of integers. 
+//Take that array and find an index N where the sum of the integers to the left of N is equal to the sum of the integers to the right of N. 
+//If there is no index that would make this happen, return -1.
 
 //Solution #1: 
 	
-
+function findEvenIndex(arr){
+  let index = -1;
+  let left = 0;
+  let right = 0;
+  arr.forEach((num, i) => {
+      arr.forEach((n, j) => {
+          if(j < i){
+            left += n
+          } else if (j > i){
+            right += n
+          }
+      })
+      console.log(left, ' || ', right)
+      if(left === right){
+          index = i
+          return
+      } else {
+        left = 0
+        right = 0
+      }
+  })
+  return index
+}
+	
+//Solution #2: 
+	
+function findEvenIndex(arr){
+  for(var i = 1; i < arr.length - 1; i++) {
+    if(arr.slice(0, i).reduce((a, b) =>  a+b) === arr.slice(i+1).reduce((a, b) =>  a+b)) {
+      return i;
+    }
+  }
+  return -1;
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 	
