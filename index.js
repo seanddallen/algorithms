@@ -2686,7 +2686,44 @@ function findEvenIndex(arr){
 
 ////////////////////////////////////////////////////////////////////////////////
 	
+//Directions Reduction (Kata - 6)
 	
-	
+//Instructions: Write a function dirReduc which will take an array of strings and returns an array of strings with the needless directions removed (W<->E or S<->N side by side).
+//EX: ["NORTH", "EAST", "WEST", "SOUTH", "WEST", "WEST"]
+	//"NORTH" and "SOUTH" are not directly opposite but they become directly opposite after the reduction of "EAST" and "WEST" 
+	//So the whole path is reducible to ["WEST", "WEST"].
+
+//Solution #1: 
+function dirReduc(plan) {
+  var opposite = {
+    'NORTH': 'SOUTH', 'EAST': 'WEST', 'SOUTH': 'NORTH', 'WEST': 'EAST'};
+  return plan.reduce(function(dirs, dir){
+      if (dirs[dirs.length - 1] === opposite[dir])
+        dirs.pop();
+      else
+        dirs.push(dir);
+      return dirs;
+    }, []);
+}
+
+//Solution #2:	
+function dirReduc(arr){
+  var newArray = [];
+  var obj = {NORTH: 'SOUTH', SOUTH: 'NORTH', EAST: 'WEST', WEST: 'EAST'};
+  var change = false;
+  
+  for (var i = 0; i < arr.length; i++) {
+    if (obj[arr[i]] !== arr[i + 1]) {
+      newArray.push(arr[i]);
+    } else {
+      change = true;
+      i++;
+    }
+  }
+  if (change === true) {
+    return dirReduc(newArray);
+  } else {
+    return newArray;
+  }
 	
 	
