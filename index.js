@@ -2685,8 +2685,9 @@ function findEvenIndex(arr){
 
 
 ////////////////////////////////////////////////////////////////////////////////
+
 	
-//Directions Reduction (Kata - 6)
+//Directions Reduction (Kata - 5)
 	
 //Instructions: Write a function dirReduc which will take an array of strings and returns an array of strings with the needless directions removed (W<->E or S<->N side by side).
 //EX: ["NORTH", "EAST", "WEST", "SOUTH", "WEST", "WEST"]
@@ -2725,5 +2726,60 @@ function dirReduc(arr){
   } else {
     return newArray;
   }
+
 	
+////////////////////////////////////////////////////////////////////////////////
+
+	
+//Next Bigger Number (Kata - 4)
+	
+//Instructions: You have to create a function that takes a positive integer number and returns the next bigger number formed by the same digits
+//If no bigger number can be composed using those digits, return -1
+
+//Solution #1: 	
+	
+function nextBigger(n){
+  var d = n.toString().split('');
+  
+  // find the pivot, the point (from right) where i > i-1
+  var p = -1;
+  for (var i = d.length-1; i > 0; i--) {
+    if (+d[i] > +d[i-1]) {
+      p = i-1;
+      break;
+    }
+  }
+  
+  // if we are unable to find the pivot, skip
+  if (p == -1) return p;
+    
+  // splice the digits in the pivot
+  var right = d.splice(p);
+  
+  // extract pivot
+  var pv = right.splice(0, 1)[0];
+  
+  // find the lowest number > pv
+  var mm = null, mmi = null;
+  for (var i = 0; i < right.length; i++) {
+    if (right[i] > pv) {
+      if (mm == null || right[i] < mm) {
+        mm = right[i];
+        mmi = i;
+      }
+    }
+  }
+
+  if (mmi == null) return -1;
+  
+  right.splice(mmi, 1);
+  right.push(pv);
+  right = right.sort();
+  
+  // concat the left + new pivot + right part
+  var ret = +d.concat([mm]).concat(right).join('');
+  if (ret < n) return -1;
+  
+  return ret;
+}
 	
