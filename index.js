@@ -2783,3 +2783,38 @@ function nextBigger(n){
   return ret;
 }
 	
+//solution #2
+	
+function nextBigger(n) {
+  if (n === reverseSortDigits(n)) return -1
+
+  let nSorted = sortDigits(n)
+  
+  while (true) {
+    n += 1
+    if (sortDigits(n) === nSorted) return n
+  }
+}
+
+function splitDigits(d) {
+  return String(d).split('')
+}
+
+function sortDigits(d) {
+  return Number(splitDigits(d).sort().join(''))
+}
+
+function reverseSortDigits(d) {
+  return Number(splitDigits(d).sort().reverse().join(''))
+}
+	
+//solution #3
+
+function nextBigger(n){
+   let a = +String(n).split('').sort((a,b) => b-a).join('');
+   
+  for (let i = n + 1; i <= a; i++) {
+    if (a == +String(i).split('').sort((a,b) => b-a).join('')) return i
+  }
+  return -1
+}
