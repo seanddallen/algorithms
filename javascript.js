@@ -1,40 +1,11 @@
 /////////////////////////////////////////////////////////////////////////////////////////
-				RANDOM ALGORITHMS
+				STANDARD ALGORITHMS
 /////////////////////////////////////////////////////////////////////////////////////////
-
-	
-//Intense String
-
-//Instructions: Strings are intense if they end in three or more more ! marks. However, having ! marks anywhere but the end makes for a non-intense string
-
-//Steps (solution #1)
-
-function intenseString(str) {
-  let bangCount = 0; 
-
-  for (let i = str.indexOf('!'); i < str.length; i++) {
-    if (str[i] !== '!') {
-      return false
-    } else {
-      bangCount++
-    }
-  }
-  if (bangCount < 3) {
-    return false
-  }
-  return true
-}
-
-	
-////////////////////////////////////////////////////////////////////////////////
 
 
 //Mean
-
 //Instructions: Calculate Mean
-
 //Steps (solution #1)
-
 
 function mean(numbers) {
   let sum = 0; 
@@ -50,9 +21,7 @@ function mean(numbers) {
 	
 	
 //Median
-
 //Instructions: Calculate Median
-
 //Steps (solution #1)
 
 function median(numbers) {
@@ -71,9 +40,7 @@ function median(numbers) {
 
 
 //Mode
-
 //Instructions: Calculate Mode
-
 //Steps (solution #1)
 
 let mode = function(arr){
@@ -98,11 +65,38 @@ let mode = function(arr){
 
 ////////////////////////////////////////////////////////////////////////////////
 
+Next...
+
+/////////////////////////////////////////////////////////////////////////////////////////
+				RANDOM ALGORITHMS
+/////////////////////////////////////////////////////////////////////////////////////////
+
+	
+//Intense String
+//Instructions: Strings are intense if they end in three or more more ! marks. However, having ! marks anywhere but the end makes for a non-intense string
+//Steps (solution #1)
+
+function intenseString(str) {
+  let bangCount = 0; 
+
+  for (let i = str.indexOf('!'); i < str.length; i++) {
+    if (str[i] !== '!') {
+      return false
+    } else {
+      bangCount++
+    }
+  }
+  if (bangCount < 3) {
+    return false
+  }
+  return true
+}
+
+////////////////////////////////////////////////////////////////////////////////	
+
 
 //Rock-Paper-Scissors-Lizard-Spock
-
 //Instructions: Scissors cuts paper, paper covers rock, rock crushes lizard, lizard poisons Spock, Spock smashes scissors, scissors decapitates lizard, lizard eats paper, paper disproves Spock, Spock vaporizes rock, and as it always has, rock crushes scissors.
-
 //Steps (solution #1)
 
 function RPSLS(p1, p2){
